@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daino - Obsessed</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typing-effect"></script>
+</head>
+<body>
+    <video autoplay loop muted id="bg-video">
+        <source src="assets/Sweater Weather.mp4" type="video/mp4">
+    </video>
+    
+    <div class="container">
+        <div class="profile-content">
+            <img src="assets/434cde5002ef8de61a8e2997264dd3ab.gif" alt="Profile" class="profile-gif">
+            
+            <div class="user-info">
+                <div class="typing-container">
+                    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=2500&color=FF6B6B&center=true&vCenter=true&width=400&lines=DAINO" alt="Typing Effect">
+                </div>
+                
+                <p class="status obsessed">Obsessed</p>
+                
+                <div class="location">
+                    <img src="assets/spain-flag.png" alt="Spain Flag" class="flag-icon">
+                    <span>Spain</span>
+                </div>
+                
+                <div class="discord-status">
+                    <p class="username">dainodaino</p>
+                    <p class="activity">Status: Do not disturb</p>
+                </div>
+            </div>
+            
+            <div class="discord-widget">
+                <img src="assets/516659089061969952.png" alt="Discord Status" class="discord-status-image">
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://github.com/Daino-dot" target="_blank" class="social-icon">
+                <img src="assets/github-icon.png" alt="GitHub">
+            </a>
+            <a href="https://www.instagram.com/daviid.mrlls_/" target="_blank" class="social-icon">
+                <img src="assets/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://discord.gg/y92sn3EsWR" target="_blank" class="social-icon">
+                <img src="assets/discord-icon.png" alt="Discord">
+            </a>
+        </div>
+
+        <button id="muteButton" class="mute-btn">🔊</button>
+    </div>
+
+    <script>
+        const video = document.getElementById('bg-video');
+        const muteButton = document.getElementById('muteButton');
+
+        video.muted = true; 
+        video.play().catch(error => console.error('Error al reproducir video:', error));
+
+        muteButton.addEventListener('click', () => {
+            video.muted = !video.muted;
+            muteButton.textContent = video.muted ? '🔇' : '🔊';
+        });
+
+        document.addEventListener('click', () => {
+            if(video.paused) video.play();
+        }, { once: true });
+    </script>
+</body>
+</html>

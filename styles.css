@@ -1,0 +1,248 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    background: #000000;
+}
+
+
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(0.85) contrast(1.1);
+    object-fit: cover;
+}
+
+
+.container {
+    background: rgba(40, 40, 40, 0.25);
+    padding: 2.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid rgba(255,255,255,0.15);
+    margin: 20px;
+    position: relative;
+}
+
+
+.profile-gif {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.3);
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    display: block;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin: 0 0 0.3rem 0;
+    letter-spacing: -1px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.status.obsessed {
+    color: #ff6b6b;
+    font-size: 1.4rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+.location {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 8px 20px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    backdrop-filter: blur(5px);
+}
+
+.flag-icon {
+    width: 28px;
+    height: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+.discord-status {
+    margin: 1.5rem 0;
+}
+
+.username {
+    font-size: 1.3rem;
+    color: #ff7675;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.activity {
+    font-style: italic;
+    color: #dcdde1;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+
+.discord-status-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid rgba(114,137,218,0.3);
+    margin: 1rem auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-top: 2.5rem;
+}
+
+.social-icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    backdrop-filter: blur(5px);
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.15);
+}
+
+.social-icon:hover img {
+    transform: scale(1.15);
+}
+
+
+.mute-btn {
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    font-size: 1.3em;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.mute-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.1) rotate(360deg);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.8rem;
+        margin: 15px;
+    }
+    
+    .profile-gif {
+        width: 150px;
+        height: 150px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .status.obsessed {
+        font-size: 1.2rem;
+    }
+    
+    .mute-btn {
+        bottom: -15px;
+        right: -15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+    
+    .profile-gif {
+        width: 130px;
+        height: 130px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.typing-container {
+    margin: 20px 0;
+    min-height: 60px;
+}
+
+.typing-container img {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
