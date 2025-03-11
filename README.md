@@ -13,7 +13,7 @@
 github.com/Daino-dot
 discord.gg/y92sn3EsWR
 
-## 🌟 Features
+🌟 Features
 - 🎥 Dynamic Video Background
 - 🔐 Privacy-First Design
 - 🖼️ Animated Profile System
