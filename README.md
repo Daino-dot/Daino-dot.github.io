@@ -2,7 +2,7 @@
 <img align="left" src="https://raw.githubusercontent.com/Daino-dot/Daino-dot/main/assets/434cde5002ef8de61a8e2997264dd3ab.gif" width="150"/> 
 
 ```csharp
-🌌 Interactive Digital Hub | Spain
+🌌 Interactive Web | Spain
 
 ⚡ Live Status:
 - Discord Presence: Do not disturb
@@ -11,10 +11,14 @@
 
 🔗 Connect:
 github.com/Daino-dot
-discord.gg/tu-invitacion
+discord.gg/y92sn3EsWR
 
 ## 🌟 Features
 - 🎥 Dynamic Video Background
 - 🔐 Privacy-First Design
 - 🖼️ Animated Profile System
 - 🌐 Social Gateway Interface
+```
+&zwnj; 
+&zwnj; 
+![](https://komarev.com/ghpvc/?username=Daino-dot)
