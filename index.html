@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Daino</title>
+    <title id="dynamicTitle"></title>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,5 +70,32 @@
             if(video.paused) video.play();
         }, { once: true });
     </script>
+    <script>
+    // Animación del título
+    const titleText = "Daino";
+    let index = 0;
+    const titleElement = document.getElementById('dynamicTitle');
+    let isBlinking = true;
+
+    // Función para escribir letra por letra
+    function typeTitle() {
+        if (index < titleText.length) {
+            titleElement.textContent += titleText.charAt(index);
+            index++;
+            setTimeout(typeTitle, 300); // Velocidad de escritura (300ms)
+        } else {
+            // Efecto de cursor parpadeante después de completar
+            setInterval(() => {
+                titleElement.textContent = isBlinking 
+                    ? titleText + "|" 
+                    : titleText;
+                isBlinking = !isBlinking;
+            }, 500);
+        }
+    }
+
+    // Iniciar la animación al cargar la página
+    window.onload = typeTitle;
+</script>
 </body>
 </html>
